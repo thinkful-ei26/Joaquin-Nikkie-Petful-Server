@@ -1,13 +1,15 @@
-# Thinkful Backend Template
+# Petful, Nikkie and Joaquin
 
-A template for developing and deploying Node.js apps.
+Backend for a pet adoption app. In this iteration, a client can query the server to receive information on a cat, or a dog, currently up for adoption, or remove either a dog or a cat from the list of available animals. In the case of a get to api/cat or api/dog,  the response will be information on the single cat or dog available for adoption. We use a FIFO structure to render the first pet in our queue, which means a user will only be shown the animal that has been waiting the longest, in the queue. A user is not able to select a cat or a dog from a list.
+
+Run the server in your local environment and go to url http://localhost:8080/api/cat, or test from Postman.
 
 ## Getting started
 
 ### Setting up a project
 
 * Move into your projects directory: `cd ~/YOUR_PROJECTS_DIRECTORY`
-* Clone this repository: `git clone https://github.com/Thinkful-Ed/backend-template YOUR_PROJECT_NAME`
+* Clone this repository: `git clone https://git.heroku.com/petful-nikkie-joaquin-server.git YOUR_PROJECT_NAME`
 * Move into the project directory: `cd YOUR_PROJECT_NAME`
 * Install the dependencies: `npm install`
 * Create a new repo on GitHub: https://github.com/new
@@ -23,7 +25,7 @@ A template for developing and deploying Node.js apps.
 
 ## Databases
 
-By default, the template is configured to connect to a MongoDB database using Mongoose.  It can be changed to connect to a PostgreSQL database using Knex by replacing any imports of `db-mongoose.js` with imports of `db-knex.js`, and uncommenting the Postgres `DATABASE_URL` lines in `config.js`.
+This iteration does not use a database. Data is hard coded as a queue in index.js.
 
 ## Deployment
 
