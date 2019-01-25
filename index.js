@@ -24,7 +24,8 @@ dogQ.enqueue({
   sex: 'Male',
   age: 3,
   breed: 'Golden Retriever',
-  story: 'Owner Passed away'
+  story: 'Owner Passed away',
+  species: 'dog'
 });
 dogQ.enqueue({
   imageURL:
@@ -35,7 +36,8 @@ dogQ.enqueue({
   sex: 'Male',
   age: 3,
   breed: 'Golden Retriever',
-  story: 'Owner Passed away'
+  story: 'Owner Passed away',
+  species: 'dog'
 });
 catQ.enqueue({
   imageURL:
@@ -46,7 +48,8 @@ catQ.enqueue({
   sex: 'Female',
   age: 2,
   breed: 'Bengal',
-  story: 'Thrown on the street'
+  story: 'Thrown on the street',
+  species: 'cat'
 });
 catQ.enqueue({
   imageURL:
@@ -57,7 +60,8 @@ catQ.enqueue({
   sex: 'Female',
   age: 2,
   breed: 'Bengal',
-  story: 'Thrown on the street'
+  story: 'Thrown on the street',
+  species: 'cat'
 });
 /***************************************************************************** */
 
@@ -81,9 +85,9 @@ app.get('/api/cat', (req, res) => {
   if (isEmpty(catQ)) {
     return res.json({ message: 'There are no cats today' });
   }
-  let oldestCat = peek(catQ);
+  let oldestPet = peek(catQ);
   return res.json({
-    oldestCat
+    oldestPet
   });
 });
 //
@@ -100,9 +104,9 @@ app.get('/api/dog', (req, res) => {
   if (isEmpty(dogQ)) {
     return res.json({ message: 'There are no dogs today' });
   }
-  let oldestDog = peek(dogQ);
+  let oldestPet = peek(dogQ);
   return res.json({
-    oldestDog
+    oldestPet
   });
 });
 app.delete('/api/dog', (req, res, next) => {

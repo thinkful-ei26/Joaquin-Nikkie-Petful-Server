@@ -5,8 +5,9 @@ Backend for a pet adoption app. In this iteration, a client can query the server
 Run the server in your local environment and go to url http://localhost:8080/api/cat, or test from Postman.
 
 The production client can be seen at https://obscure-ocean-99131.herokuapp.com/
+The repository is at https://github.com/thinkful-ei26/Nikkie-Joaquin-Petful-Client.git
 The production server is at https://petful-nikkie-joaquin-server.herokuapp.com/
-
+The repository is at https://github.com/thinkful-ei26/Joaquin-Nikkie-Petful-Server.git
 ## Getting started
 
 ### Setting up a project
